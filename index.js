@@ -1,6 +1,7 @@
 
 // built in modules
 // package.json dependencies
+// import local files
 // define variables
 // start the server / module.exports
 
@@ -10,7 +11,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.get('/test', (req, res) => {
+app.get('/sample', (req, res) => {
     return res.json({ message: 'success' });
 });
 
