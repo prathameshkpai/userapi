@@ -17,37 +17,41 @@ mongoose.Promise = global.Promise;
 
 app.use(bodyParser.json());
 
-app.get('/customer', (req, res) => {
-    return res.send('GOt it');
+app.get('/user/:id', (req, res) => {
+    customer.findById(req.params.id,(err,customer)=>{
+        if(err){
+            return res.send({Error:Error});
+        }
+        return res.send({customer});
+    });    
 });
 
-app.post('/customer', (req, res) => {
+app.post('/user', (req, res) => {
     let data = new customer(req.body);
     data.save().then(() => {
-        return res.send('Inserted');
+        return res.send({operation:'Inserted'});
     }).catch((err) => {
-        return res.send('error' + err);
+        return res.send({Error:err});
     });
 });
 
-app.put('/customer', (req, res) => {
+app.put('/user', (req, res) => {
     customer.findOneAndUpdate({ name: req.body.name }, req.body, { new: true }, (err, doc) => {
-        if (!err) {
-            return res.send('updated');
-        } else {
-            return res.send('update failed');
-        }
+        if (err) {
+            return res.send({Error:err});
+        } 
+        return res.send({operation:'updated'});
     }
     );
 });
 
-app.delete('/customer/:id', (req, res) => {
-    customer.findByIdAndRemove(req.params.id, (ee, doc) => {
-        if (!ee) {
-            return res.send('Deleted');
-        } else {
-            return res.send('error' + ee);
-        }
+app.delete('/user/:id', (req, res) => {
+    customer.findByIdAndRemove(req.params.id, (err, doc) => {
+        if (err) {
+            return res.send({ Error :err });
+        } 
+        return res.send({operation:'Deleted'});    
+        
     });
 });
 
