@@ -7,6 +7,6 @@ let Customers = new mongoose.Schema({
     country: { type: String, required: true }
 });
 
-let customers = mongoose.model('customers', Customers);
 
-module.exports = customers;
+
+module.exports = mongoose.model('customers', Customers);
