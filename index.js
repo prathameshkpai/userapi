@@ -17,11 +17,11 @@ mongoose.Promise = global.Promise;
 
 app.use(bodyParser.json());
 
-app.get('/sample', (req, res) => {
+app.get('/customer', (req, res) => {
     return res.send('GOt it');
 });
 
-app.post('/sample', (req, res) => {
+app.post('/customer', (req, res) => {
     let data = new customer(req.body);
     data.save().then(() => {
         return res.send('Inserted');
@@ -30,7 +30,7 @@ app.post('/sample', (req, res) => {
     });
 });
 
-app.put('/sample', (req, res) => {
+app.put('/customer', (req, res) => {
     customer.findOneAndUpdate({ name: req.body.name }, req.body, { new: true }, (err, doc) => {
         if (!err) {
             return res.send('updated');
@@ -41,7 +41,7 @@ app.put('/sample', (req, res) => {
     );
 });
 
-app.delete('/sample/:id', (req, res) => {
+app.delete('/customer/:id', (req, res) => {
     customer.findByIdAndRemove(req.params.id, (ee, doc) => {
         if (!ee) {
             return res.send('Deleted');
