@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.get('/user/:id', (req, res) => {
     customer.findById(req.params.id,(err,customer)=>{
         if(err){
-            return res.send({Error:Error});
+            return res.send({Error:err});
         }
         return res.send({customer});
     });    
