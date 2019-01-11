@@ -27,7 +27,7 @@ app.engine('hbs', exphbs({ extname: 'hbs', defaultLayout: 'User_req', layoutsDir
 
 app.get('/user', (req, res) => {
     res.render('user_req.hbs');
-    
+
 });
 
 app.get('/user/:id', (req, res) => {
@@ -36,7 +36,7 @@ app.get('/user/:id', (req, res) => {
             return res.send({ Error: err });
         }
         return res.send({ customer });
-    });    
+    });
 });
 
 app.post('/user', (req, res) => {
