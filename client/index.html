@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User interface</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="a">
+
+        <label for="id">Provide user id for Get request or Delete request:</label>
+        <input type="text" id="userid" name="id"><br>
+
+        <div id=info>
+            <label for="name ">Name:</label>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age"><br>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country"><br>
+        </div>
+
+        <div id="mySidenav" class="sidenav">
+            <button id="closebtn">&times;</button><br>
+
+            <input type="button" id="namo" value="Get">
+            <input type="button" id="bramha" value="Post">
+            <input type="button" id="vishnu" value="Put">
+            <input type="button" id="all" value="Get all">
+            <input type="button" id="asura" value="Delete"><br>
+        </div>
+
+        <button style="font-size:30px;cursor:pointer" id='open'>&#9776;</button>
+
+        <label id="lab5">This is response of your operation.</label><br>
+    </div>
+    <div class="b">
+        <table id='table' border="1">
+            <thead>
+                <tr>
+                    <th><label id="lab1">id</label></th>
+                    <th><label id="lab2">Name</label></th>
+                    <th><label id="lab3">Age</label></th>
+                    <th><label id="lab4">country</label></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="servercalls.js"> </script>
+</body>
+
+</html>

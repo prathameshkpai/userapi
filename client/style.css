@@ -1,0 +1,149 @@
+.a{
+    text-align: center;
+    padding: 30px;
+}
+
+label{
+    color:rgb(255, 253, 253);
+}
+
+
+.b{
+    text-align: right;
+}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color:black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+
+body{
+    background-image: url('PettyJealousArcticfox-size_restricted.gif');
+    background-size: 100% ;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+#info{
+    margin-left: 260px;
+}
+#table{
+    display: none;
+    text-align: center;
+    margin: auto;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 25px;
+    color:white;
+    width: 50%;
+    border: 0px;
+    padding: 30px;
+}
+
+#userid{
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom:1px groove black;
+    background-color: transparent;
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+#name{
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom:1px groove black;
+    background-color: transparent;
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 23px;
+    margin-right: 10px;
+}
+
+
+#age{
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom:1px groove black;
+    background-color: transparent;
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 35px;
+    margin-right: 10px;
+}
+
+
+
+#country{
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom:1px groove black;
+    background-color: transparent;
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#closebtn {
+    position: absolute;
+    top: 0;
+    color: white;
+    background-color: transparent;
+    border: 0px;
+    right: 10px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#bramha ,#asura ,#vishnu ,#all, #namo {
+    width: 200px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 0px;
+    padding: 8px 8px 8px 32px;
+    font-size: 25px;
+    color: whitesmoke;
+    background-color: transparent;
+
+}
+
+#open{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    background-color: transparent;
+    border: 0px;
+}
+
+#lab5{
+    
+}
+
+
+#all:hover{
+ color: white;
+}
